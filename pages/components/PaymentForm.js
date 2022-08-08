@@ -21,7 +21,7 @@ const PaymentForm = () => {
     } 
 
   return (
-    <div>
+    <Element>
         Name: {''}
             <input 
                 text='text'
@@ -39,7 +39,7 @@ const PaymentForm = () => {
             <CardElement />
 
             <button onClick={createSubscription}>subscribe</button>
-    </div>
+    </Element>
   )
 }
 
