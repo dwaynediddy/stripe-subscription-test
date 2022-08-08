@@ -2,15 +2,14 @@ import {
     CardElement,
     useStripe,
     useElements,
-    Element
   } from "@stripe/react-stripe-js"
   import { useState } from 'react'
 
 const PaymentForm = () => {
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
-    const stripe = useStripe()
-    const elements = useElements()
+    // const stripe = useStripe()
+    // const elements = useElements()
 
     const createSubscription = async () => {
         try {
@@ -22,7 +21,7 @@ const PaymentForm = () => {
     } 
 
   return (
-    <Element>
+    <div>
         Name: {''}
             <input 
                 text='text'
@@ -40,7 +39,7 @@ const PaymentForm = () => {
             <CardElement />
 
             <button onClick={createSubscription}>subscribe</button>
-    </Element>
+    </div>
   )
 }
 
